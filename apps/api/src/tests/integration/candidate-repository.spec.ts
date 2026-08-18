@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
 
-import { Candidate } from '../../src/domain/entities/candidate';
-import { Party } from '../../src/domain/entities/party';
-import { DrizzleCandidateRepository } from '../../src/infra/database/repositories/drizzle-candidate-repository';
-import { DrizzlePartyRepository } from '../../src/infra/database/repositories/drizzle-party-repository';
+import { Candidate } from '../../domain/entities/candidate.js';
+import { Party } from '../../domain/entities/party.js';
+import { DrizzleCandidateRepository } from '../../infra/database/repositories/drizzle-candidate-repository.js';
+import { DrizzlePartyRepository } from '../../infra/database/repositories/drizzle-party-repository.js';
 
 describe('DrizzleCandidateRepository', () => {
   const partyRepository = new DrizzlePartyRepository();

@@ -1,15 +1,15 @@
 import { and, eq } from 'drizzle-orm';
 import { describe, expect, it } from 'vitest';
 
-import { db } from '../../src/infra/database/client';
+import { db } from '../../infra/database/client.js';
 import {
   candidates,
   documents,
   governmentPlans,
   parties,
   sources,
-} from '../../src/infra/database/schema';
-import { seed } from '../../src/infra/database/seed';
+} from '../../infra/database/schema/index.js';
+import { seed } from '../../infra/database/seed/index.js';
 
 describe('Database seed', () => {
   it('should be idempotent', async () => {

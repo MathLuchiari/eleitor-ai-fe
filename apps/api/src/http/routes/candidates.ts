@@ -10,9 +10,7 @@ export async function candidatesRoutes(app: FastifyInstance) {
     listCandidatesUseCase,
   );
 
-  app.get('/candidates', async (_request, reply) => {
-    const response = await listCandidatesController.handle();
-
-    return reply.status(response.statusCode).send(response.body);
-  });
+  app.get('/candidates', (request, reply) =>
+    listCandidatesController.handle(request, reply),
+  );
 }

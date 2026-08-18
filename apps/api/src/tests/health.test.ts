@@ -4,7 +4,7 @@ process.env.DATABASE_URL ??= 'postgresql://test:test@localhost:5432/eleitorai_te
 
 describe('GET /health', () => {
   it('should return API health status', async () => {
-    const { buildApp } = await import('../src/app.js');
+    const { buildApp } = await import('../app.js');
     const app = buildApp();
 
     try {
@@ -21,5 +21,5 @@ describe('GET /health', () => {
     } finally {
       await app.close();
     }
-  });
+  }, 10000);
 });

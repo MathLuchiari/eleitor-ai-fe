@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
-import { Party } from '../../src/domain/entities/party';
-import { DrizzlePartyRepository } from '../../src/infra/database/repositories/drizzle-party-repository';
+import { Party } from '../../domain/entities/party.js';
+import { DrizzlePartyRepository } from '../../infra/database/repositories/drizzle-party-repository.js';
 
 describe('DrizzlePartyRepository', () => {
   const repository = new DrizzlePartyRepository();

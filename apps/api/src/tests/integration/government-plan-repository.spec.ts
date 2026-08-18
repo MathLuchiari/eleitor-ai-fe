@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest';
 
-import { Candidate } from '../../src/domain/entities/candidate';
-import { GovernmentPlan } from '../../src/domain/entities/government-plan';
-import { Party } from '../../src/domain/entities/party';
-import { DrizzleCandidateRepository } from '../../src/infra/database/repositories/drizzle-candidate-repository';
-import { DrizzleGovernmentPlanRepository } from '../../src/infra/database/repositories/drizzle-government-plan-repository';
-import { DrizzlePartyRepository } from '../../src/infra/database/repositories/drizzle-party-repository';
+import { Candidate } from '../../domain/entities/candidate.js';
+import { GovernmentPlan } from '../../domain/entities/government-plan.js';
+import { Party } from '../../domain/entities/party.js';
+import { DrizzleCandidateRepository } from '../../infra/database/repositories/drizzle-candidate-repository.js';
+import { DrizzleGovernmentPlanRepository } from '../../infra/database/repositories/drizzle-government-plan-repository.js';
+import { DrizzlePartyRepository } from '../../infra/database/repositories/drizzle-party-repository.js';
 
 describe('DrizzleGovernmentPlanRepository', () => {
   const partyRepository = new DrizzlePartyRepository();
