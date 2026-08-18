@@ -13,7 +13,8 @@
     "db:migrate": "drizzle-kit migrate",
     "lint": "eslint .",
     "test": "cross-env NODE_ENV=test vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "db:seed": "tsx src/infra/database/seed/index.ts"
   },
   "keywords": [],
   "author": "",
