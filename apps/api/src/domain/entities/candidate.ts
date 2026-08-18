@@ -25,6 +25,10 @@ export class Candidate {
     });
   }
 
+  static restore(props: CandidateProps): Candidate {
+    return new Candidate(props);
+  }
+
   get id(): string {
     return this.props.id;
   }

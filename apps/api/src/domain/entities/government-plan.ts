@@ -24,6 +24,10 @@ export class GovernmentPlan {
     });
   }
 
+  static restore(props: GovernmentPlanProps): GovernmentPlan {
+    return new GovernmentPlan(props);
+  }
+
   get id(): string {
     return this.props.id;
   }

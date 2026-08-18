@@ -29,6 +29,10 @@ export class Document {
     });
   }
 
+  static restore(props: DocumentProps): Document {
+    return new Document(props);
+  }
+
   get id(): string {
     return this.props.id;
   }

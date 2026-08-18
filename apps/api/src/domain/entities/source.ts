@@ -28,6 +28,10 @@ export class Source {
     });
   }
 
+  static restore(props: SourceProps): Source {
+    return new Source(props);
+  }
+
   get id(): string {
     return this.props.id;
   }

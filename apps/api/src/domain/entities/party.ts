@@ -8,42 +8,46 @@ export interface PartyProps {
 }
 
 export class Party {
-  private constructor(private readonly props: PartyProps) {}
+    private constructor(private readonly props: PartyProps) {}
 
-  static create(
+    static create(
     props: Omit<PartyProps, 'id' | 'createdAt' | 'updatedAt'>,
-  ): Party {
-    const now = new Date();
+    ): Party {
+        const now = new Date();
 
-    return new Party({
-      ...props,
-      id: crypto.randomUUID(),
-      createdAt: now,
-      updatedAt: now,
-    });
-  }
+        return new Party({
+            ...props,
+            id: crypto.randomUUID(),
+            createdAt: now,
+            updatedAt: now,
+        });
+    }
 
-  get id(): string {
-    return this.props.id;
-  }
+    static restore(props: PartyProps): Party {
+        return new Party(props);
+    }
 
-  get name(): string {
-    return this.props.name;
-  }
+    get id(): string {
+        return this.props.id;
+    }
 
-  get acronym(): string {
-    return this.props.acronym;
-  }
+    get name(): string {
+        return this.props.name;
+    }
 
-  get number(): number {
-    return this.props.number;
-  }
+    get acronym(): string {
+        return this.props.acronym;
+    }
 
-  get createdAt(): Date {
-    return this.props.createdAt;
-  }
+    get number(): number {
+        return this.props.number;
+    }
 
-  get updatedAt(): Date {
-    return this.props.updatedAt;
-  }
+    get createdAt(): Date {
+        return this.props.createdAt;
+    }
+
+    get updatedAt(): Date {
+        return this.props.updatedAt;
+    }
 }
