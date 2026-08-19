@@ -1,6 +1,7 @@
 import { type FastifyReply, type FastifyRequest } from 'fastify';
 
 import { ListCandidatesUseCase } from '../../../application/use-cases/candidates/list-candidates.js';
+import { candidateResponse } from '../../mappers/candidate-response.js';
 
 export class ListCandidatesController {
   constructor(
@@ -10,6 +11,8 @@ export class ListCandidatesController {
   async handle(_request: FastifyRequest, reply: FastifyReply) {
     const candidates = await this.listCandidatesUseCase.execute();
 
-    return reply.status(200).send(candidates);
+    return reply
+      .status(200)
+      .send(candidates.map(candidateResponse));
   }
 }
