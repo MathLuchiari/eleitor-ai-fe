@@ -20,11 +20,18 @@ import { GetDocumentUseCase } from '../application/use-cases/documents/get-docum
 import { ListDocumentsByGovernmentPlanUseCase } from '../application/use-cases/documents/list-documents-by-government-plan.js';
 import { CreateDocumentUseCase } from '../application/use-cases/documents/create-document.js';
 
+import { ListSourcesUseCase } from '../application/use-cases/sources/list-sources.js';
+import { DrizzleSourceRepository } from './database/repositories/drizzle-source-repository.js';
+import { GetSourceUseCase } from '../application/use-cases/sources/get-source.js';
+import { ListSourcesByDocumentUseCase } from '../application/use-cases/sources/list-sources-by-document.js';
+import { CreateSourceUseCase } from '../application/use-cases/sources/create-source.js';
+
 export function createContainer() {
   const candidateRepository = new DrizzleCandidateRepository();
   const partyRepository = new DrizzlePartyRepository();
   const governmentPlanRepository = new DrizzleGovernmentPlanRepository();
   const documentRepository = new DrizzleDocumentRepository();
+  const sourceRepository = new DrizzleSourceRepository();
 
   return {
     candidateRepository,
@@ -48,5 +55,11 @@ export function createContainer() {
     getDocumentUseCase: new GetDocumentUseCase(documentRepository),
     listDocumentsByGovernmentPlanUseCase: new ListDocumentsByGovernmentPlanUseCase(documentRepository),
     createDocumentUseCase: new CreateDocumentUseCase(documentRepository),
+
+    sourceRepository,
+    listSourcesUseCase: new ListSourcesUseCase(sourceRepository),
+    getSourceUseCase: new GetSourceUseCase(sourceRepository),
+    listSourcesByDocumentUseCase: new ListSourcesByDocumentUseCase(sourceRepository),
+    createSourceUseCase: new CreateSourceUseCase(sourceRepository),
   };
 }

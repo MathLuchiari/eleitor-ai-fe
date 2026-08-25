@@ -15,7 +15,8 @@
     "test": "cross-env NODE_ENV=test vitest run",
     "test:watch": "vitest",
     "db:seed": "tsx src/infra/database/seed/index.ts",
-    "test:db:clean": "cross-env NODE_ENV=test tsx src/scripts/clean-test-db.ts"
+    "test:db:clean": "cross-env NODE_ENV=test tsx src/scripts/clean-test-db.ts",
+    "test:all": "tsx src/scripts/test.ts"
   },
   "keywords": [],
   "author": "",
