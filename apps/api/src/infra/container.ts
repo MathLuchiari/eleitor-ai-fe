@@ -16,6 +16,9 @@ import { CreateGovernmentPlanUseCase } from '../application/use-cases/government
 
 import { ListDocumentsUseCase } from '../application/use-cases/documents/list-documents.js';
 import { DrizzleDocumentRepository } from './database/repositories/drizzle-document-repository.js';
+import { GetDocumentUseCase } from '../application/use-cases/documents/get-document.js';
+import { ListDocumentsByGovernmentPlanUseCase } from '../application/use-cases/documents/list-documents-by-government-plan.js';
+import { CreateDocumentUseCase } from '../application/use-cases/documents/create-document.js';
 
 export function createContainer() {
   const candidateRepository = new DrizzleCandidateRepository();
@@ -42,5 +45,8 @@ export function createContainer() {
 
     documentRepository,
     listDocumentsUseCase: new ListDocumentsUseCase(documentRepository),
+    getDocumentUseCase: new GetDocumentUseCase(documentRepository),
+    listDocumentsByGovernmentPlanUseCase: new ListDocumentsByGovernmentPlanUseCase(documentRepository),
+    createDocumentUseCase: new CreateDocumentUseCase(documentRepository),
   };
 }
