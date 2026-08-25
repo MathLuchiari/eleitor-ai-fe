@@ -1,7 +1,7 @@
 import { type FastifyReply, type FastifyRequest } from 'fastify';
 
 import { GetCandidateUseCase } from '../../../application/use-cases/candidates/get-candidate.js';
-import { getCandidateParamsSchema } from '../../schemas/get-candidate-schema.js';
+import { getCandidateParamsSchema } from '../../schemas/candidates/get-candidate-schema.js';
 import { candidateResponse } from '../../mappers/candidate-response.js';
 
 export class GetCandidateController {

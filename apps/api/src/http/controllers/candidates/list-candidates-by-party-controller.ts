@@ -1,7 +1,7 @@
 import { type FastifyReply, type FastifyRequest } from 'fastify';
 
 import { ListCandidatesByPartyUseCase } from '../../../application/use-cases/candidates/list-candidates-by-party.js';
-import { listCandidatesByPartyParamsSchema } from '../../schemas/list-candidates-by-party-schema.js';
+import { listCandidatesByPartyParamsSchema } from '../../schemas/candidates/list-candidates-by-party-schema.js';
 import { candidateResponse } from '../../mappers/candidate-response.js';
 
 export class ListCandidatesByPartyController {

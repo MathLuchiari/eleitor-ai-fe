@@ -4,8 +4,8 @@ import { type GovernmentPlanRepository } from '../../../domain/repositories/gove
 export interface CreateGovernmentPlanUseCaseInput {
   candidateId: string;
   title: string;
-  description?: string;
-  publishedAt?: Date;
+  description?: string | undefined;
+  publishedAt?: Date | undefined;
 }
 
 export class CreateGovernmentPlanUseCase {
