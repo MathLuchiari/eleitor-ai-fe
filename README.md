@@ -1,5 +1,24 @@
 # EleitorAI
 
+<!-- portfolio
+cover: Eleitor
+highlight: AI
+featured: true
+order: 1
+tone: blue
+title: EleitorAI — a RAG assistant for Brazilian elections
+title.pt: EleitorAI — um assistente RAG para as eleições brasileiras
+title.es: EleitorAI — un asistente RAG para las elecciones brasileñas
+description: Side project that answers voters' questions about parties, candidates and government plans, grounded in the source documents. Layered API (domain → use cases → HTTP), document ingestion with configurable chunking, and tests at unit, integration and HTTP level.
+description.pt: Projeto pessoal que responde dúvidas de eleitores sobre partidos, candidatos e planos de governo, com base nos documentos originais. API em camadas (domínio → casos de uso → HTTP), ingestão de documentos com chunking configurável e testes de unidade, integração e HTTP.
+description.es: Proyecto personal que responde preguntas de los votantes sobre partidos, candidatos y planes de gobierno, basándose en los documentos originales. API en capas (dominio → casos de uso → HTTP), ingesta de documentos con chunking configurable y pruebas unitarias, de integración y HTTP.
+status: In progress
+status.pt: Em andamento
+status.es: En curso
+stack: TypeScript, Fastify, Drizzle, Postgres + pgvector, Vitest, Next.js
+-->
+
+
 Plataforma para consulta e análise de candidatos, propostas e planos de
 governo utilizando IA.
 
